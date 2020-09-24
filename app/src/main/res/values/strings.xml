@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Pokemon</string>
+    <string name="label_weight">Weight</string>
+    <string name="label_height">Height</string>
+    <string name="label_description">Description</string>
+    <string name="formatted_weight">%1d hg</string>
+    <string name="formatted_height">%1d dm</string>
+
 </resources>

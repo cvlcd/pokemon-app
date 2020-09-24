@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:foreground="?attr/selectableItemBackground"
-    android:clickable="true">
+    android:clickable="true"
+    android:focusable="true">
 
     <TextView
         android:id="@+id/tv_index"
@@ -16,7 +17,7 @@
         android:layout_marginTop="8dp"
         android:textColor="#A0A0A0"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/gl_40"
+        app:layout_constraintEnd_toStartOf="@+id/gl_v90"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="#662" />
@@ -31,25 +32,10 @@
         android:singleLine="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/gl_40"
+        app:layout_constraintEnd_toStartOf="@+id/gl_v90"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_index"
         tools:text="Fletchinder" />
-
-    <!-- wip -->
-    <TextView
-        android:visibility="gone"
-        android:id="@+id/tv_type"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="12dp"
-        android:layout_marginTop="8dp"
-        android:textColor="#A0A0A0"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/gl_80"
-        app:layout_constraintStart_toStartOf="@+id/gl_40"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Type" />
 
     <ImageView
         android:id="@+id/iv_favourite"
@@ -57,60 +43,17 @@
         android:layout_height="0dp"
         android:layout_marginHorizontal="12dp"
         android:layout_marginVertical="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/barrier"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/gl_80"
+        app:layout_constraintStart_toStartOf="@+id/gl_v90"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_favourite_border"
-        app:tint="#A0A0A0" />
-
-    <!-- wip -->
-    <com.google.android.material.chip.ChipGroup
-        android:visibility="gone"
-        android:id="@+id/chg_types"
-        android:layout_width="0dp"
-        android:layout_height="36dp"
-        android:layout_marginHorizontal="12dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/gl_80"
-        app:layout_constraintStart_toStartOf="@+id/gl_40"
-        app:layout_constraintTop_toBottomOf="@+id/tv_type">
-
-        <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
-            android:text="Flying"/>
-
-        <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
-            android:text="Fighting"/>
-
-    </com.google.android.material.chip.ChipGroup>
+        app:srcCompat="@drawable/ic_favourite_border" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_40"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.330" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_80"
+        android:id="@+id/gl_v90"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.80" />
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="bottom"
-        app:constraint_referenced_ids="tv_name,chg_types"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
